@@ -1,0 +1,15 @@
+while True:
+    a=int(input("enter the 1st operand"))
+    b=int(input("enter the 2nd operand"))
+    s=input("enter the operation u want to perform")
+    if(s=='+'):
+        print(a+b)
+    elif(s=='-'):
+        print(a-b)
+    elif(s=='*'):
+        print(a*b)
+    elif(s=='/'):
+        print(a/b)
+    d=input("do u want to continue more say yes or no")
+    if(d=='no'):
+        break
