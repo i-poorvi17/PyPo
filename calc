@@ -1,15 +1,57 @@
+import math
 while True:
-    a=int(input("enter the 1st operand"))
-    b=int(input("enter the 2nd operand"))
-    s=input("enter the operation u want to perform")
-    if(s=='+'):
-        print(a+b)
-    elif(s=='-'):
-        print(a-b)
-    elif(s=='*'):
-        print(a*b)
-    elif(s=='/'):
-        print(a/b)
-    d=input("do u want to continue more say yes or no")
+    s=input("enter the operation u want to perform \n 1.percentage(%) \n 2.addition(+) \n 3.subtraction(-)\n 4.multiplication(*)\n 5.division(/)\n 6.exponent(^)\n")
+    if(s=='%'):
+        a=float(input("enter the number of which u want to find the percentage\t"))
+        b=float(input("enter the percent\t"))        
+        p=a*(b/100)
+        print(p)
+    else:
+        if(s=='+'):
+            a=float(input("enter the 1st operand\t"))
+            b=float(input("enter the 2nd operand\t"))
+            p=a+b
+            print(p)
+        elif(s=='-'):
+            a=float(input("enter the 1st operand\t"))
+            b=float(input("enter the 2nd operand\t"))
+            p=a-b
+            print(p)
+        elif(s=='*'):
+            a=float(input("enter the 1st operand\t"))
+            b=float(input("enter the 2nd operand\t"))
+            p=a*b
+            print(p)
+            p=print(a*b)
+        elif(s=='/'):
+            a=float(input("enter the 1st operand\t"))
+            b=float(input("enter the 2nd operand\t"))
+            p=a/b
+            print(p)
+        elif(s=="^"):
+            a=float(input("enter the number "))
+            b=float(input('enter the power'))
+            p=pow(a,b)
+            print(p)
+        else:
+            print("invalid operator")
+
+
+    while True:
+        k=input("do you want to add more operations to the answer\t")
+        if(k.lower()=='no'):
+            break
+        else:
+            c=float(input("enter the operand\t"))
+            l=input("enter the operation u want to perform\t")
+            if(l=='+'):
+                print(p+c)
+            elif(l=='-'):
+                print( p-c)
+            elif(l=='*'):
+                print(p*c)
+            elif(l=='/'):
+                print(p/c)
+    d=input("do u want to perform a new calculation\t")
     if(d=='no'):
         break
