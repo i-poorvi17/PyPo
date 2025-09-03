@@ -1,5 +1,6 @@
 import time
 def greet():
+    
     timestamp=time.strftime('%H')
     c=int(timestamp)
     if(c<12):
@@ -11,3 +12,4 @@ def greet():
     elif(c<24):
         print("good night")
 greet()
+
