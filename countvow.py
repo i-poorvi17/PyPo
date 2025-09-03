@@ -1,4 +1,4 @@
-s=input('enter the string')
+s=input('enter the string\t')
 s=s.lower()
 count=0
 for ch in s :
