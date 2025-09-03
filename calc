@@ -1,57 +1,59 @@
-import math
-while True:
-    s=input("enter the operation u want to perform \n 1.percentage(%) \n 2.addition(+) \n 3.subtraction(-)\n 4.multiplication(*)\n 5.division(/)\n 6.exponent(^)\n")
-    if(s=='%'):
-        a=float(input("enter the number of which u want to find the percentage\t"))
-        b=float(input("enter the percent\t"))        
-        p=a*(b/100)
-        print(p)
-    else:
-        if(s=='+'):
-            a=float(input("enter the 1st operand\t"))
-            b=float(input("enter the 2nd operand\t"))
-            p=a+b
-            print(p)
-        elif(s=='-'):
-            a=float(input("enter the 1st operand\t"))
-            b=float(input("enter the 2nd operand\t"))
-            p=a-b
-            print(p)
-        elif(s=='*'):
-            a=float(input("enter the 1st operand\t"))
-            b=float(input("enter the 2nd operand\t"))
-            p=a*b
-            print(p)
-            p=print(a*b)
-        elif(s=='/'):
-            a=float(input("enter the 1st operand\t"))
-            b=float(input("enter the 2nd operand\t"))
-            p=a/b
-            print(p)
-        elif(s=="^"):
-            a=float(input("enter the number "))
-            b=float(input('enter the power'))
-            p=pow(a,b)
-            print(p)
-        else:
-            print("invalid operator")
-
-
+try:
+    import math
     while True:
-        k=input("do you want to add more operations to the answer\t")
-        if(k.lower()=='no'):
+        s=input("enter the operation u want to perform \n or if want to exit(#) \t")
+        if(s=='%'):
+            a=float(input("enter the number of which u want to find the percentage\t"))
+            b=float(input("enter the percent\t"))        
+            p=a*(b/100)
+            print(p)
+        elif(s=='#'):
             break
         else:
-            c=float(input("enter the operand\t"))
-            l=input("enter the operation u want to perform\t")
-            if(l=='+'):
-                print(p+c)
-            elif(l=='-'):
-                print( p-c)
-            elif(l=='*'):
-                print(p*c)
-            elif(l=='/'):
-                print(p/c)
-    d=input("do u want to perform a new calculation\t")
-    if(d=='no'):
-        break
+            if(s=='+'or s=='-' or s=='*' or s=='/'):
+                a=float(input("enter the 1st operand\t"))
+                b=float(input("enter the 2nd operand\t"))
+                if(s=='+'):
+                    p=a+b
+                    print(p)
+                elif(s=='-'):
+                    p=a-b
+                    print(p)
+                elif(s=='*'):
+                    p=a*b
+                    print(p)
+                elif(s=='/'):
+                    p=a/b
+                    print(p)
+            elif(s=="^"):
+                a=float(input("enter the number "))
+                b=float(input('enter the power'))
+                p=pow(a,b)
+                print(p)
+            elif(s=='log'):
+                a=float(input("enter the value for log"))
+                p=math.log10(a)
+                print(p)
+            else:
+                print("invalid operator")
+
+
+        while True:
+                k=input("do you want to add more operations to the answer\t")
+                if(k.lower()=='no'):
+                    break
+                else:
+                    c=float(input("enter the operand\t"))
+                    l=input("enter the operation u want to perform\t")
+                    if(l=='+'):
+                        print(p+c)
+                    elif(l=='-'):
+                        print( p-c)
+                    elif(l=='*'):
+                        print(p*c)
+                    elif(l=='/'):
+                        print(p/c)
+        
+    print("calculation ended#")
+except:
+   print("error occured")
