@@ -1,59 +1,81 @@
 try:
-    import math
-    while True:
-        s=input("enter the operation u want to perform \n or if want to exit(#) \t")
-        if(s=='%'):
-            a=float(input("enter the number of which u want to find the percentage\t"))
-            b=float(input("enter the percent\t"))        
-            p=a*(b/100)
-            print(p)
-        elif(s=='#'):
-            break
-        else:
-            if(s=='+'or s=='-' or s=='*' or s=='/'):
-                a=float(input("enter the 1st operand\t"))
-                b=float(input("enter the 2nd operand\t"))
-                if(s=='+'):
-                    p=a+b
-                    print(p)
-                elif(s=='-'):
-                    p=a-b
-                    print(p)
-                elif(s=='*'):
-                    p=a*b
-                    print(p)
-                elif(s=='/'):
-                    p=a/b
-                    print(p)
-            elif(s=="^"):
-                a=float(input("enter the number "))
-                b=float(input('enter the power'))
-                p=pow(a,b)
-                print(p)
-            elif(s=='log'):
-                a=float(input("enter the value for log"))
-                p=math.log10(a)
-                print(p)
-            else:
-                print("invalid operator")
-
-
+        import math
         while True:
-                k=input("do you want to add more operations to the answer\t")
-                if(k.lower()=='no'):
-                    break
+            a=float(input("enter the number\n"))
+            s=input("enter the operation u want to perform \n or if want to exit(#) \t")
+            if(s=='%'):
+                b=float(input("enter the percent\t"))        
+                p=a*(b/100)
+                print(p)
+            elif(s=='#'):
+                break
+            else:
+                if(s=='+'or s=='-' or s=='*' or s=='/'):
+                    b=float(input("enter the 2nd operand\t"))
+                    if(s=='+'):
+                        p=a+b
+                        print(p)
+                    elif(s=='-'):
+                        p=a-b
+                        print(p)
+                    elif(s=='*'):
+                        p=a*b
+                        print(p)
+                    elif(s=='/'):
+                        p=a/b
+                        print(p)
+                elif(s=="^"):
+                    b=float(input('enter the power'))
+                    p=pow(a,b)
+                    print(p)
+                elif(s=='log'):
+                    a=float(input("enter the value for log"))
+                    p=math.log10(a)
+                    print(p)
                 else:
-                    c=float(input("enter the operand\t"))
-                    l=input("enter the operation u want to perform\t")
-                    if(l=='+'):
-                        print(p+c)
-                    elif(l=='-'):
-                        print( p-c)
-                    elif(l=='*'):
-                        print(p*c)
-                    elif(l=='/'):
-                        print(p/c)
-        
-    print("calculation ended#")
+                    print("invalid operator")
+                    
+
+
+            while True:
+                    k=input("do you want to add more operations to the answer\t")
+                    if(k.lower()=='no'):
+                        break
+                    else:
+                        s=input("enter the operation u want to perform \t")
+                        if(s=='%'):
+                            b=float(input("enter the percent\t"))        
+                            p=p*(b/100)
+                            print(p)
+                        elif(s=='#'):
+                            break
+                        else:
+                            if(s=='+'or s=='-' or s=='*' or s=='/'):
+                                b=float(input("enter the 2nd operand\t"))
+                                if(s=='+'):
+                                    p=p+b
+                                    print(p)
+                                elif(s=='-'):
+                                    p=p-b
+                                    print(p)
+                                elif(s=='*'):
+                                    p=p*b
+                                    print(p)
+                                elif(s=='/'):
+                                    p=p/b
+                                    print(p)
+                            elif(s=="^"):
+                                b=float(input('enter the power'))
+                                p=pow(p,b)
+                                print(p)
+                            elif(s=='log'):
+                                p=math.log10(p)
+                                print(p)
+                            else:
+                                print("invalid operator")
+
 except:
-   print("error occured")
+    print("error occured")
+finally:
+    print('calculation  ended')
+            
